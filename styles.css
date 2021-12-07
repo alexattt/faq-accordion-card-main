@@ -1,0 +1,365 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+.flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+/***** some base definitions from https://piccalil.li/blog/a-modern-css-reset/ *****/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/***** main styles *****/
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 12px;
+  color: #4a4b5e;
+  background: #af67e9;
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), color-stop(80%, #6565e7));
+  background: linear-gradient(180deg, #af67e9 0%, #6565e7 80%);
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin-bottom: 30px;
+}
+
+.card-container {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  width: 60vw;
+  height: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 35px 40px -8px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 35px 40px -8px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 1300px) {
+  .card-container {
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow: inherit;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .card-container {
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow: inherit;
+    height: auto;
+  }
+}
+
+.faq-container {
+  padding: 0px 80px 50px 50px;
+  -webkit-animation: faq-animation 1.5s ease-out;
+          animation: faq-animation 1.5s ease-out;
+}
+
+.faq-container .faq-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  color: #1d1e35;
+}
+
+@media screen and (min-width: 1300px) {
+  .faq-container .faq-title {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .faq-container .faq-title {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .faq-container .faq-title {
+    margin-top: 0px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .faq-container {
+    padding: 0px 50px 50px 50px;
+    height: 80%;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .illustration-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 450px;
+    background-position: -570px -320px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .illustration-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .illustration-container {
+    height: 50px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .mobile-illustration {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .mobile-illustration {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    bottom: 54%;
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .mobile-illustration {
+    bottom: 52%;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .mobile-shadow {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .mobile-shadow {
+    width: 60%;
+    height: auto;
+    position: absolute;
+    z-index: 0;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .woman-illustration {
+    background-image: url(./images/illustration-woman-online-desktop.svg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 450px;
+    background-position: -80px 40px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .box-illustration {
+    position: absolute;
+    background-image: url(./images/illustration-box-desktop.svg);
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 50%;
+    right: 36%;
+    bottom: 5%;
+    z-index: 3;
+    -webkit-animation: box-animation 1s ease-out;
+            animation: box-animation 1s ease-out;
+  }
+}
+
+.accordion {
+  color: black;
+  background-color: white;
+}
+
+.accordion .label {
+  position: relative;
+  padding: 10px 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.accordion .label:hover {
+  color: #f47c57;
+}
+
+.accordion .label::before {
+  content: url(./images/icon-arrow-down.svg);
+  position: absolute;
+  top: 30%;
+  right: 0px;
+  font-size: 30px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.accordion .content {
+  position: relative;
+  background: white;
+  height: 0;
+  text-align: justify;
+  width: auto;
+  overflow: hidden;
+}
+
+.accordion hr {
+  border: 0.5px solid #e7e7e9;
+}
+
+.accordion .container.active .content {
+  height: auto;
+}
+
+.accordion .container.active .label {
+  font-weight: 700;
+  color: #1d1e35;
+}
+
+.accordion .container.active .label::before {
+  content: url(./images/icon-arrow-down.svg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+footer .attribution {
+  position: absolute;
+  left: 50%;
+  bottom: 0%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 14px;
+  padding-bottom: 10px;
+  color: #1d1e35;
+}
+
+footer .attribution a {
+  color: #e7e7e9;
+}
+
+@media screen and (max-width: 400px) {
+  footer .attribution {
+    font-size: 10px;
+  }
+}
+
+/*** animations ***/
+@-webkit-keyframes box-animation {
+  0% {
+    bottom: 0%;
+  }
+  100% {
+    bottom: 5%;
+  }
+}
+@keyframes box-animation {
+  0% {
+    bottom: 0%;
+  }
+  100% {
+    bottom: 5%;
+  }
+}
+
+@-webkit-keyframes faq-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes faq-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
