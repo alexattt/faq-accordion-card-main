@@ -72,7 +72,6 @@ body {
   left: 0;
   top: 0;
   bottom: 0;
-  margin-bottom: 30px;
 }
 
 .card-container {
@@ -102,15 +101,10 @@ body {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   .card-container {
-    position: relative;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    overflow: inherit;
     height: auto;
+    width: 85vw;
   }
 }
 
@@ -140,7 +134,13 @@ body {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
+  .faq-container .faq-title {
+    margin-top: 5px;
+  }
+}
+
+@media screen and (max-width: 340px) {
   .faq-container .faq-title {
     margin-top: 0px;
   }
@@ -199,7 +199,6 @@ body {
     width: 60%;
     height: 100%;
     bottom: 54%;
-    z-index: 1;
   }
 }
 
@@ -258,7 +257,7 @@ body {
 
 .accordion .label {
   position: relative;
-  padding: 10px 0;
+  padding: 10px 3px;
   font-size: 16px;
   cursor: pointer;
 }
@@ -275,6 +274,18 @@ body {
   font-size: 30px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+@media screen and (max-width: 440px) {
+  .accordion .label {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .accordion .label {
+    font-size: 12px;
+  }
 }
 
 .accordion .content {
@@ -303,28 +314,6 @@ body {
   content: url(./images/icon-arrow-down.svg);
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-}
-
-footer .attribution {
-  position: absolute;
-  left: 50%;
-  bottom: 0%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  text-align: center;
-  font-size: 14px;
-  padding-bottom: 10px;
-  color: #1d1e35;
-}
-
-footer .attribution a {
-  color: #e7e7e9;
-}
-
-@media screen and (max-width: 400px) {
-  footer .attribution {
-    font-size: 10px;
-  }
 }
 
 /*** animations ***/

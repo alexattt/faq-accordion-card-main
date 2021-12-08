@@ -66,7 +66,6 @@ body {
   left: 0;
   top: 0;
   bottom: 0;
-  margin-bottom: 30px;
 }
 
 .card-container {
@@ -85,11 +84,9 @@ body {
     overflow: inherit;
   }
 
-  @media screen and (max-width:400px) {
-    position: relative;
-    flex-direction: column;
-    overflow: inherit;
+  @media screen and (max-width:420px) {
     height: auto;
+    width: 85vw;
   }
 }
 
@@ -111,7 +108,11 @@ body {
       text-align: center;
     }
 
-    @media screen and (max-width:400px) {
+    @media screen and (max-width:420px) {
+      margin-top: 5px;
+    }
+
+    @media screen and (max-width:340px) {
       margin-top: 0px;
     }
   }
@@ -156,7 +157,6 @@ body {
     width: 60%;
     height: 100%;
     bottom: 54%;
-    z-index: 1;
   }
 
   @media screen and (max-width:400px) {
@@ -209,7 +209,7 @@ body {
 
   .label {
     position: relative;
-    padding: 10px 0;
+    padding: 10px 3px;
     font-size: 16px;
     cursor: pointer;
 
@@ -224,6 +224,14 @@ body {
       right: 0px;
       font-size: 30px;
       transform: translateY(-50%);
+    }
+
+    @media screen and (max-width: 440px) {
+      font-size: 14px;
+    }
+
+    @media screen and (max-width: 340px) {
+      font-size: 12px;
     }
   }
 
@@ -253,28 +261,6 @@ body {
 .accordion .container.active .label::before {
   content: url(./images/icon-arrow-down.svg);
   transform: rotate(180deg);
-}
-
-footer {
-
-  .attribution {
-    position: absolute;
-    left: 50%;
-    bottom: 0%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-size: 14px;
-    padding-bottom: 10px;
-    color: $dark-blue;
-  
-    a {
-      color: $light-gray-blue;
-    }
-
-    @media screen and (max-width:400px) {
-      font-size: 10px;
-    }
-  }
 }
 
 /*** animations ***/
